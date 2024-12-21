@@ -1,6 +1,7 @@
 # Сервис "Секции и кружки" для платформы "Острова.65"
 ## Команда "Ошибка 418"
-<img src="https://github.com/user-attachments/assets/63ad1590-4895-455c-b817-502eeda54f70" alt="drawing" width="200"/>
+
+<img src="https://github.com/user-attachments/assets/34fd051d-caf0-4ee8-8182-a468f829bf9d" alt="drawing" width="200"/>
 
 Команда при помощи реверс инжиниринга API сайта [персонифицированного дополнительного образования](https://pfdo.ru/) разработала сервис "Секции и кружки" для приложения Острова.65. 
 
@@ -10,4 +11,4 @@ FrontEnd приложения разработан при помощи Vue.js и
 
 Созданная документация к API размещена по адресу: [документация](http://pfdo-o65.site/build/index.html)
 
-Демо сервиса доступно по адресу: [Секции и кружки](http://pfdo-o65.site/index.html)
+Демо сервиса доступно по адресу: [секции](http://pfdo-o65.site/index.html)
