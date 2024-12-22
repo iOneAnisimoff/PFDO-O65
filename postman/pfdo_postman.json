@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "8d003929-c76e-43f6-ab77-fd79e45bd27e",
+		"name": "Hackthon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23360029"
+	},
+	"item": [
+		{
+			"name": "Info",
+			"item": [
+				{
+					"name": "directory-program-directions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apidir.pfdo.ru/v1/directory-program-directions",
+							"protocol": "https",
+							"host": [
+								"apidir",
+								"pfdo",
+								"ru"
+							],
+							"path": [
+								"v1",
+								"directory-program-directions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "directory-program-activities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apidir.pfdo.ru/v1/directory-program-activities?search[direction_id]=2&per-page=-1&fields=id,direction_id,name",
+							"protocol": "https",
+							"host": [
+								"apidir",
+								"pfdo",
+								"ru"
+							],
+							"path": [
+								"v1",
+								"directory-program-activities"
+							],
+							"query": [
+								{
+									"key": "search[direction_id]",
+									"value": "2",
+									"description": "Фильтр направления"
+								},
+								{
+									"key": "per-page",
+									"value": "-1"
+								},
+								{
+									"key": "fields",
+									"value": "id,direction_id,name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "muns",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.pfdo.ru/v2/main-page/muns/31",
+							"protocol": "https",
+							"host": [
+								"api",
+								"pfdo",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"main-page",
+								"muns",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "illnesses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apidir.pfdo.ru/v1/illnesses",
+							"protocol": "https",
+							"host": [
+								"apidir",
+								"pfdo",
+								"ru"
+							],
+							"path": [
+								"v1",
+								"illnesses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search",
+			"item": [
+				{
+					"name": "programs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.pfdo.ru/v2/main-page/search/es-programs?per-page=24&operator=31&expand=program_nok_rating,duration_string,kind",
+							"protocol": "https",
+							"host": [
+								"api",
+								"pfdo",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"main-page",
+								"search",
+								"es-programs"
+							],
+							"query": [
+								{
+									"key": "search[form]",
+									"value": "1",
+									"description": "см. excel Форма обучения",
+									"disabled": true
+								},
+								{
+									"key": "search[enrollment]",
+									"value": "1",
+									"description": "см. excel Набор в группу",
+									"disabled": true
+								},
+								{
+									"key": "search[zab]",
+									"value": "1",
+									"description": "GET info/illnesses",
+									"disabled": true
+								},
+								{
+									"key": "search[mun]",
+									"value": "1344",
+									"description": "GET info/muns",
+									"disabled": true
+								},
+								{
+									"key": "search[start_education_month_and_year][]",
+									"value": "9.2024",
+									"description": "date MM.YYYY",
+									"disabled": true
+								},
+								{
+									"key": "search[ages][0]",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "search[average_score_min]",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "search[average_score_max]",
+									"value": "5",
+									"description": "Всегда 5 если есть average_score_min",
+									"disabled": true
+								},
+								{
+									"key": "search[distance_technology]",
+									"value": "1",
+									"description": "Показать дистанционные программы",
+									"disabled": true
+								},
+								{
+									"key": "search[program_project_id]",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "search[direction_id][]",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "search[program_activity_id_list]",
+									"value": "8",
+									"disabled": true
+								},
+								{
+									"key": "search[name]",
+									"value": "%D0%90",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "-program_nok_rating",
+									"description": "Лучшие по рейтингу АСМА",
+									"disabled": true
+								},
+								{
+									"key": "per-page",
+									"value": "24"
+								},
+								{
+									"key": "operator",
+									"value": "31"
+								},
+								{
+									"key": "expand",
+									"value": "program_nok_rating,duration_string,kind"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.pfdo.ru/v2/main-page/search/organizations?sort=-program_nok_rating&per-page=24&page=1&expand=organization_labels,kind&operator=31",
+							"protocol": "https",
+							"host": [
+								"api",
+								"pfdo",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"main-page",
+								"search",
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "search[name]",
+									"value": "%D0%A0%D0%A6%D0%9E",
+									"disabled": true
+								},
+								{
+									"key": "search[address]",
+									"value": "%D0%AE%D0%B6%D0%BD%D0%BE",
+									"disabled": true
+								},
+								{
+									"key": "search[mun]",
+									"value": "1346",
+									"disabled": true
+								},
+								{
+									"key": "search[rating_min]",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "search[rating_max]",
+									"value": "100",
+									"disabled": true
+								},
+								{
+									"key": "search[organization_service_type_status]",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "search[service_type_id]",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "-program_nok_rating",
+									"description": "-program_nok_rating, empty"
+								},
+								{
+									"key": "per-page",
+									"value": "24"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "expand",
+									"value": "organization_labels,kind"
+								},
+								{
+									"key": "operator",
+									"value": "31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.pfdo.ru/v2/main-page/search/events?sort=-id&per-page=24&operator=31&page=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"pfdo",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"main-page",
+								"search",
+								"events"
+							],
+							"query": [
+								{
+									"key": "search[min_end_time]",
+									"value": "20.12.2024",
+									"description": "date DD.MM.YYYY",
+									"disabled": true
+								},
+								{
+									"key": "search[min_start_time]",
+									"value": "22.12.2024",
+									"description": "date DD.MM.YYYY",
+									"disabled": true
+								},
+								{
+									"key": "search[max_deadline_entry]",
+									"value": "28.12.2024",
+									"description": "date DD.MM.YYYY",
+									"disabled": true
+								},
+								{
+									"key": "search[mun]",
+									"value": "1347",
+									"description": "GET info/muns",
+									"disabled": true
+								},
+								{
+									"key": "search[direction_id]",
+									"value": "5",
+									"description": "GET info/directory-program-directions",
+									"disabled": true
+								},
+								{
+									"key": "search[section]",
+									"value": "1",
+									"description": "см. excel Раздел мероприятия",
+									"disabled": true
+								},
+								{
+									"key": "search[organization]",
+									"value": "22987",
+									"description": "GET search/organizations",
+									"disabled": true
+								},
+								{
+									"key": "search[education_form]",
+									"value": "FULL_TIME",
+									"disabled": true
+								},
+								{
+									"key": "search[disabled_access]",
+									"value": "true",
+									"description": "Дети с ОВЗ",
+									"disabled": true
+								},
+								{
+									"key": "search[name]",
+									"value": "%D0%A2%D0%B5",
+									"description": "String URI",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "-id",
+									"description": "name, id"
+								},
+								{
+									"key": "per-page",
+									"value": "24"
+								},
+								{
+									"key": "operator",
+									"value": "31",
+									"description": "31 - Сахалин"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pfdo.ru/v2/main-page/search/events/35323",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pfdo",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"main-page",
+						"search",
+						"events",
+						"35323"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "program",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pfdo.ru/v2/public/programs/1153504?expand=address,program_image,registry,reestrs,direction,activity,is_open,available_groups,program_text,distance_technology,organization,images,interest,modules,rating,program_reviews,region,img_transparent,program_icons,program_nok_rating,average_score,phone",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pfdo",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"public",
+						"programs",
+						"1153504"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "address,program_image,registry,reestrs,direction,activity,is_open,available_groups,program_text,distance_technology,organization,images,interest,modules,rating,program_reviews,region,img_transparent,program_icons,program_nok_rating,average_score,phone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "organization",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pfdo.ru/v2/main-page/search/organizations/{{org_id}}?expand=organization_labels",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pfdo",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"main-page",
+						"search",
+						"organizations",
+						"{{org_id}}"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "organization_labels"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "news",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pfdo.ru/v2/main-page/news?page=1&operator=31&per-page=15&search[organization_id]=29892&sort=-date_publication&expand=additional_link",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pfdo",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"main-page",
+						"news"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "operator",
+							"value": "31"
+						},
+						{
+							"key": "per-page",
+							"value": "15"
+						},
+						{
+							"key": "search[organization_id]",
+							"value": "29892"
+						},
+						{
+							"key": "sort",
+							"value": "-date_publication"
+						},
+						{
+							"key": "expand",
+							"value": "additional_link"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "main-page-settings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pfdo.ru/v2/main-page-settings?operator_id=31",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pfdo",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"main-page-settings"
+					],
+					"query": [
+						{
+							"key": "operator_id",
+							"value": "31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "program-icon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pfdo.ru/v3/program/program-icon?search[operator_id]=31",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pfdo",
+						"ru"
+					],
+					"path": [
+						"v3",
+						"program",
+						"program-icon"
+					],
+					"query": [
+						{
+							"key": "search[operator_id]",
+							"value": "31"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "prog_id",
+			"value": "1153504"
+		},
+		{
+			"key": "org_id",
+			"value": "22987"
+		}
+	]
+}
